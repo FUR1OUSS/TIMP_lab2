@@ -123,3 +123,33 @@ git branch
 **sudo apt install clang-format**
 
 **clang-format -style="Mozilla" hello_world.cpp**
+
+<img width="682" alt="Снимок экрана 2023-05-18 в 19 58 40" src="https://github.com/FUR1OUSS/TIMP_lab2/assets/82472327/bee1b2c1-9c37-40c1-b83e-7a5955600a37">
+
+3. commit, push, создайте pull-request patch2 -> master:
+
+**git add hello_world.cpp | git commit -m "Mozilla style" | git push origin patch2**
+
+4. В ветке master в удаленном репозитории измените комментарии, например, расставьте знаки препинания, переведите комментарии на другой язык:
+
+5. Убедитесь, что в pull-request появились конфликтны:
+
+<img width="916" alt="Снимок экрана 2023-05-18 в 20 09 20" src="https://github.com/FUR1OUSS/TIMP_lab2/assets/82472327/d38c1473-f416-4c2f-b65c-6aef16417892">
+
+6. Для этого локально выполните pull + rebase (точную последовательность команд, следует узнать самостоятельно). Исправьте конфликты.
+
+**git pull --rebase origin main**
+
+**Откроем файл cat hello_world.cpp и увидим конфликты**
+
+7. Сделайте force push в ветку patch2:
+
+**git push origin patch2 -f**
+
+8. Убедитель, что в pull-request пропали конфликтны:
+
+<img width="908" alt="Снимок экрана 2023-05-18 в 20 19 57" src="https://github.com/FUR1OUSS/TIMP_lab2/assets/82472327/ad35555d-35de-49b1-836e-d01adcf2c6e4">
+
+9. Вмержите pull-request patch2 -> maste:
+
+<img width="913" alt="Снимок экрана 2023-05-18 в 20 20 41" src="https://github.com/FUR1OUSS/TIMP_lab2/assets/82472327/95818e40-97fc-4d93-b3b1-3f445ec229ae">
